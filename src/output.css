@@ -556,6 +556,10 @@ video {
   margin-bottom: 1.5rem;
 }
 
+.ml-6 {
+  margin-left: 1.5rem;
+}
+
 .flex {
   display: flex;
 }
@@ -563,6 +567,21 @@ video {
 .size-20 {
   width: 5rem;
   height: 5rem;
+}
+
+.size-10 {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.size-12 {
+  width: 3rem;
+  height: 3rem;
+}
+
+.size-14 {
+  width: 3.5rem;
+  height: 3.5rem;
 }
 
 .h-max {
@@ -593,12 +612,36 @@ video {
   max-width: 230px;
 }
 
+.flex-row {
+  flex-direction: row;
+}
+
 .flex-col {
   flex-direction: column;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .gap-4 {
   gap: 1rem;
+}
+
+.gap-8 {
+  gap: 2rem;
+}
+
+.gap-16 {
+  gap: 4rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-0 {
+  gap: 0px;
 }
 
 .rounded-xl {
@@ -624,6 +667,11 @@ video {
   background-color: hsl(226 43% 10% / var(--tw-bg-opacity));
 }
 
+.bg-red-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 165 165 / var(--tw-bg-opacity));
+}
+
 .px-32 {
   padding-left: 8rem;
   padding-right: 8rem;
@@ -632,6 +680,11 @@ video {
 .py-40 {
   padding-top: 10rem;
   padding-bottom: 10rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .pb-16 {
@@ -658,6 +711,10 @@ video {
   padding-top: 2rem;
 }
 
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -673,6 +730,11 @@ video {
 
 .text-\[11px\] {
   font-size: 11px;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .font-light {
@@ -705,4 +767,53 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 800px) {
+  .laptop\:ml-0 {
+    margin-left: 0px;
+  }
+
+  .laptop\:mb-2 {
+    margin-bottom: 0.5rem;
+  }
+
+  .laptop\:size-20 {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .laptop\:max-w-\[230px\] {
+    max-width: 230px;
+  }
+
+  .laptop\:flex-col {
+    flex-direction: column;
+  }
+
+  .laptop\:gap-4 {
+    gap: 1rem;
+  }
+
+  .laptop\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .laptop\:pl-8 {
+    padding-left: 2rem;
+  }
+
+  .laptop\:pb-16 {
+    padding-bottom: 4rem;
+  }
+
+  .laptop\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .laptop\:font-light {
+    font-weight: 300;
+  }
 }
