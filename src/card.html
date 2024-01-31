@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body class="font-rubik text-white bg-slate-800">
+    <div class="flex flex-col justify-end w-fit pt-16">
+      <div
+        class="w-full bg-light-red-work h-14 rounded-tl-3xl rounded-tr-3xl overflow-hidden"
+      >
+        <img
+          src="../images/icon-work.svg"
+          alt="work card icon"
+          class="size-24 float-right mr-4 -mt-4"
+        />
+      </div>
+      <div class="flex flex-col gap-16 bg-dark-blue w-fit p-8 rounded-3xl">
+        <div class="flex justify-between">
+          <h1 class="text-3xl">Work</h1>
+          <img src="../images/icon-ellipsis.svg" alt="options" class="h-2" />
+        </div>
+        <h1 class="text-8xl font-thin">32 hrs</h1>
+        <p class="text-2xl font-thin text-pale-blue">Last Week - 36 hrs</p>
+      </div>
+    </div>
+  </body>
+</html>
