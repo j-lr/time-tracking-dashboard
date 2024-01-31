@@ -22,26 +22,39 @@
     <link href="./output.css" rel="stylesheet" />
   </head>
   <body class="font-rubik text-white bg-slate-800">
-    <div class="flex flex-col justify-end w-fit pt-16">
+    <div
+      class="flex flex-col justify-end w-full laptop:w-max max-w-[350px] pt-16"
+    >
       <div
-        class="w-full bg-light-red-work h-10 laptop:h-24 rounded-tl-3xl rounded-tr-3xl overflow-hidden"
+        class="w-full bg-light-red-work h-16 laptop:h-24 rounded-tl-2xl laptop:rounded-tl-3xl rounded-tr-2xl laptop:rounded-tr-3xl overflow-hidden"
       >
         <img
           src="../images/icon-work.svg"
           alt="work card icon"
-          class="size-20 laptop:size-24 float-right mr-4 -mt-4"
+          class="size-20 laptop:size-24 float-right mr-6 -mt-4"
         />
+        <!-- category color bar ends -->
       </div>
+      <!-- category label and data div begins -->
       <div
-        class="flex flex-col gap-16 bg-dark-blue w-fit p-8 rounded-3xl -translate-y-8"
+        class="flex flex-col gap-4 laptop:gap-12 bg-dark-blue w-full p-4 laptop:p-8 rounded-xl -translate-y-8"
       >
         <div class="flex justify-between">
-          <h1 class="text-3xl">Work</h1>
+          <h1 class="text-sm laptop:text-3xl">Work</h1>
           <img src="../images/icon-ellipsis.svg" alt="options" class="h-2" />
+          <!-- category label and ellipsis ends -->
         </div>
-        <h1 class="text-8xl font-thin">32 hrs</h1>
-        <p class="text-2xl font-thin text-pale-blue">Last Week - 36 hrs</p>
+        <div
+          class="flex laptop:flex-col justify-between gap-16 laptop:gap-4 pb-4"
+        >
+          <p class="text-xl laptop:text-8xl font-thin">32 hrs</p>
+          <p class="text-sm laptop:text-2xl font-thin text-pale-blue">
+            Last Week - 36 hrs
+          </p>
+          <!-- category data ends -->
+        </div>
       </div>
+      <!-- category label and data div ends -->
     </div>
   </body>
 </html>
