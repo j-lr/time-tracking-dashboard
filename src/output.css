@@ -630,6 +630,16 @@ video {
   height: 6rem;
 }
 
+.size-12 {
+  width: 3rem;
+  height: 3rem;
+}
+
+.size-16 {
+  width: 4rem;
+  height: 4rem;
+}
+
 .h-fit {
   height: -moz-fit-content;
   height: fit-content;
@@ -701,6 +711,21 @@ video {
 
 .w-4 {
   width: 1rem;
+}
+
+.translate-y-4 {
+  --tw-translate-y: 1rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-y-4 {
+  --tw-translate-y: -1rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-y-8 {
+  --tw-translate-y: -2rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .flex-row {
@@ -851,6 +876,11 @@ video {
   padding-bottom: 1rem;
 }
 
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
 .pb-4 {
   padding-bottom: 1rem;
 }
@@ -977,6 +1007,19 @@ video {
   .laptop\:size-20 {
     width: 5rem;
     height: 5rem;
+  }
+
+  .laptop\:size-24 {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .laptop\:h-14 {
+    height: 3.5rem;
+  }
+
+  .laptop\:h-24 {
+    height: 6rem;
   }
 
   .laptop\:max-w-\[230px\] {
