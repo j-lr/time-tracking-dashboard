@@ -2,6 +2,9 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
+    fontFamily: {
+      rubik: ["Rubik", "sans-serif"],
+    },
     screens: {
       laptop: "800px",
       // => @media (min-width: 800px) { ... }
