@@ -1,5 +1,4 @@
-const CARD_CONTAINER_STYLE =
-  "flex flex-col justify-end w-full laptop:w-max max-w-[350px]  font-rubik text-white";
+const CARD_CONTAINER_STYLE = "flex flex-col w-full h-min font-rubik text-white";
 
 const CARD_BAR_CONTAINER_STYLE =
   "w-full bg-light-red-work h-16 laptop:h-16 rounded-tl-2xl laptop:rounded-tl-lg rounded-tr-2xl laptop:rounded-tr-lg overflow-hidden";
@@ -8,7 +7,7 @@ const CARD_BAR_TITLE_ICON_STYLE =
   "size-20 laptop:size-20 float-right mr-6 -mt-4";
 
 const CARD_DATA_CONTAINER_STYLE =
-  "flex flex-col gap-4 laptop:gap-6 bg-dark-blue w-full p-4 rounded-xl -translate-y-8";
+  "flex flex-col gap-4 laptop:gap-16 bg-dark-blue w-full p-4 rounded-xl -mt-8 ";
 
 const CARD_TITLE_AND_ELLIPSIS_STYLE = "flex justify-between items-center";
 

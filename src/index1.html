@@ -24,11 +24,15 @@
     <script type="module" src="index.js"></script>
   </head>
   <body>
-    <div class="bg-[rgb(40)] w-full h-max font-rubik">
-      <div class="flex bg-very-dark-blue h-min px-32 py-40">
-        <div class="bg-dark-blue w-max h-max rounded-xl">
+    <div
+      class="flex justify-center items-center min-w-screen min-h-screen bg-[rgb(40,40,40)] laptop:bg-very-dark-blue font-rubik"
+    >
+      <div
+        class="flex flex-col laptop:flex-row w-fit h-min px-4 laptop:px-32 py-32 bg-very-dark-blue"
+      >
+        <div id="reportRoot" class="bg-dark-blue w-fit h-min rounded-xl">
           <div
-            class="flex laptop:flex-col bg-blue pl-6 pr-12 pt-8 pb-4 laptop:pb-16 mb-5 rounded-xl w-fit laptop:max-w-[230px]"
+            class="flex laptop:flex-col bg-blue p-6 laptop:pr-12 pt-8 pb-4 laptop:pb-16 mb-5 rounded-xl"
           >
             <img
               src="../images/image-jeremy.png "
@@ -38,13 +42,16 @@
             <div class="flex flex-col h-min ml-6 laptop:ml-0">
               <p class="text-pale-blue laptop:mb-2 font-thin">Report for</p>
               <h1 class="text-white text-xl laptop:text-4xl font-light">
-                Jeremy Robson
+                Jeremy
+              </h1>
+              <h1 class="text-white text-xl laptop:text-4xl font-light">
+                Robson
               </h1>
             </div>
           </div>
 
           <div
-            class="flex laptop:flex-col justify-center gap-16 laptop:gap-4 px-2 laptop:px-0 laptop:pl-8 pb-8 text-blue"
+            class="flex laptop:flex-col justify-center gap-16 laptop:gap-4 px-2 px-6 laptop:pl-8 pb-8 text-blue"
           >
             <p>Daily</p>
             <p>Weekly</p>
@@ -54,7 +61,7 @@
 
         <div
           id="cardsRoot"
-          class="grid gap-x-2 gap-y-0 grid-cols-3 grid-rows-2 m-0 mx-8 bg-slate-500"
+          class="grid gap-x-4 gap-y-4 content-center w-full grid-cols-1 grid_col_2_breakpoint:grid-cols-2 grid_col_3_breakpoint:grid-cols-3 mx-0 laptop:mx-8 my-8 laptop:my-0"
         ></div>
       </div>
     </div>

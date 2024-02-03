@@ -8,6 +8,8 @@ module.exports = {
     screens: {
       laptop: "800px",
       // => @media (min-width: 800px) { ... }
+      grid_col_2_breakpoint: "1000px",
+      grid_col_3_breakpoint: "1200px",
     },
     extend: {
       colors: {
