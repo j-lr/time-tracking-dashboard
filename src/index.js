@@ -10,13 +10,16 @@ let currentTimeFrame = TIME_FRAME_DAILY;
 document.addEventListener("DOMContentLoaded", loadContent);
 
 async function fetchData() {
-  const d = await fetch("../../data.json");
+  const d = await fetch("../data.json");
+
   if (d.ok) return await d.json();
+  //   return `Error fetching data.json ${d.statusText}`;
 }
 
 async function loadContent() {
   const cardsRoot = document.getElementById(CARDS_ROOT_ID);
   const data = await fetchData();
+  console.log(data);
   if (data) {
     data.forEach((data) => {
       cardsRoot.appendChild(
