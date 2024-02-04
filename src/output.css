@@ -723,11 +723,6 @@ video {
   background-color: hsl(235 46% 20% / var(--tw-bg-opacity));
 }
 
-.bg-light-red-work {
-  --tw-bg-opacity: 1;
-  background-color: hsl(15 100% 70% / var(--tw-bg-opacity));
-}
-
 .bg-very-dark-blue {
   --tw-bg-opacity: 1;
   background-color: hsl(226 43% 10% / var(--tw-bg-opacity));

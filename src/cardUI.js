@@ -1,7 +1,7 @@
 const CARD_CONTAINER_STYLE = "flex flex-col w-full h-min font-rubik text-white";
 
 const CARD_BAR_CONTAINER_STYLE =
-  "w-full bg-light-red-work h-16 laptop:h-16 rounded-tl-2xl laptop:rounded-tl-lg rounded-tr-2xl laptop:rounded-tr-lg overflow-hidden";
+  "w-full h-16 laptop:h-16 rounded-tl-2xl laptop:rounded-tl-lg rounded-tr-2xl laptop:rounded-tr-lg overflow-hidden";
 
 const CARD_BAR_TITLE_ICON_STYLE =
   "size-20 laptop:size-20 float-right mr-6 -mt-4";
@@ -16,20 +16,29 @@ const CARD_TITLE_INFO_STYLE =
 
 const ELLIPSIS_ICON_URL = "../images/icon-ellipsis.svg";
 
-function createCardHtml(titleImageSrc, title, timeObject, previousTimeLabel) {
+function createCardHtml(
+  titleImageSrc,
+  title,
+  timeObject,
+  previousTimeLabel,
+  titleBarBackgroundColor
+) {
   const container = document.createElement("div");
   container.className = CARD_CONTAINER_STYLE;
 
-  container.appendChild(createTitleColorBar(titleImageSrc));
+  container.appendChild(
+    createTitleColorBar(titleImageSrc, titleBarBackgroundColor)
+  );
 
   container.appendChild(createCardDataUI(title, timeObject, previousTimeLabel));
 
   return container;
 }
 
-function createTitleColorBar(titleImageSrc) {
+function createTitleColorBar(titleImageSrc, titleBarBackgroundColor) {
   const categoryBar = document.createElement("div");
   categoryBar.className = CARD_BAR_CONTAINER_STYLE;
+  categoryBar.style.backgroundColor = titleBarBackgroundColor;
 
   const titleIcon = document.createElement("img");
   titleIcon.src = titleImageSrc;

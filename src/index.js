@@ -15,6 +15,25 @@ async function fetchData() {
   if (d.ok) return await d.json();
 }
 
+function getCardTitleIconURL(data) {
+  switch (data.title) {
+    case "Work":
+      return "../images/icon-work.svg";
+    case "Play":
+      return "../images/icon-play.svg";
+    case "Study":
+      return "../images/icon-study.svg";
+    case "Exercise":
+      return "../images/icon-exercise.svg";
+    case "Social":
+      return "../images/icon-social.svg";
+    case "Self Care":
+      return "../images/icon-self-care.svg";
+    default:
+      throw new Error("default case reached, inspect for changes in data.json");
+  }
+}
+
 async function loadContent() {
   const cardsRoot = document.getElementById(CARDS_ROOT_ID);
   const data = await fetchData();
@@ -23,10 +42,11 @@ async function loadContent() {
     data.forEach((data) => {
       cardsRoot.appendChild(
         createCardHtml(
-          "../images/icon-work.svg",
+          getCardTitleIconURL(data),
           data.title,
           extractDataTimeFrame(data),
-          extractPreviousTimeLabel()
+          extractPreviousTimeLabel(),
+          data.titleBgColor
         )
       );
     });
