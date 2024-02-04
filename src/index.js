@@ -53,15 +53,17 @@ async function loadContent() {
     });
   }
 
-  const id = document.getElementById("id");
+  const timeframeRoot = document.getElementById("timeFrameRoot");
 
-  for (let i = 0, len = id.childElementCount; i < len; i++) {
-    const child = id.children.item(i);
+  for (let i = 0, len = timeframeRoot.childElementCount; i < len; i++) {
+    const child = timeframeRoot.children.item(i);
 
     child.addEventListener("click", (e) => {
       onTimeFrameClick(child.textContent);
-      for (let i = 0, len = id.childElementCount; i < len; i++)
-        id.children.item(i).classList.remove("font-color-pale-white");
+      for (let i = 0, len = timeframeRoot.childElementCount; i < len; i++)
+        timeframeRoot.children
+          .item(i)
+          .classList.remove("font-color-pale-white");
 
       e.target.classList.add("font-color-pale-white");
     });
