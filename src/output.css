@@ -580,8 +580,12 @@ video {
   margin-bottom: 2rem;
 }
 
-.-mt-4 {
-  margin-top: -1rem;
+.-mt-1 {
+  margin-top: -0.25rem;
+}
+
+.-mt-1\.5 {
+  margin-top: -0.375rem;
 }
 
 .-mt-8 {
@@ -600,56 +604,8 @@ video {
   margin-left: 1.5rem;
 }
 
-.mr-6 {
-  margin-right: 1.5rem;
-}
-
-.-mt-2 {
-  margin-top: -0.5rem;
-}
-
-.-mt-0 {
-  margin-top: -0px;
-}
-
-.-mt-px {
-  margin-top: -1px;
-}
-
-.mr-4 {
-  margin-right: 1rem;
-}
-
-.-mt-1 {
-  margin-top: -0.25rem;
-}
-
-.mr-2 {
-  margin-right: 0.5rem;
-}
-
-.-mt-6 {
-  margin-top: -1.5rem;
-}
-
-.-mt-3 {
-  margin-top: -0.75rem;
-}
-
-.-mt-0\.5 {
-  margin-top: -0.125rem;
-}
-
-.-mt-1\.5 {
-  margin-top: -0.375rem;
-}
-
 .mr-3 {
   margin-right: 0.75rem;
-}
-
-.mr-2\.5 {
-  margin-right: 0.625rem;
 }
 
 .flex {
@@ -665,46 +621,6 @@ video {
   height: 3.5rem;
 }
 
-.size-20 {
-  width: 5rem;
-  height: 5rem;
-}
-
-.size-16 {
-  width: 4rem;
-  height: 4rem;
-}
-
-.size-12 {
-  width: 3rem;
-  height: 3rem;
-}
-
-.size-24 {
-  width: 6rem;
-  height: 6rem;
-}
-
-.size-8 {
-  width: 2rem;
-  height: 2rem;
-}
-
-.size-10 {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.size-11 {
-  width: 2.75rem;
-  height: 2.75rem;
-}
-
-.size-9 {
-  width: 2.25rem;
-  height: 2.25rem;
-}
-
 .h-1 {
   height: 0.25rem;
 }
@@ -718,18 +634,6 @@ video {
   height: min-content;
 }
 
-.h-12 {
-  height: 3rem;
-}
-
-.h-32 {
-  height: 8rem;
-}
-
-.h-64 {
-  height: 16rem;
-}
-
 .min-h-screen {
   min-height: 100vh;
 }
@@ -741,6 +645,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .grid-cols-1 {
@@ -846,11 +754,6 @@ video {
   padding-right: 1rem;
 }
 
-.px-6 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-
 .py-32 {
   padding-top: 8rem;
   padding-bottom: 8rem;
@@ -951,14 +854,6 @@ video {
     height: 5rem;
   }
 
-  .laptop\:h-16 {
-    height: 4rem;
-  }
-
-  .laptop\:h-32 {
-    height: 8rem;
-  }
-
   .laptop\:flex-row {
     flex-direction: row;
   }
@@ -997,8 +892,8 @@ video {
     padding-bottom: 4rem;
   }
 
-  .laptop\:pl-8 {
-    padding-left: 2rem;
+  .laptop\:pl-6 {
+    padding-left: 1.5rem;
   }
 
   .laptop\:pr-12 {

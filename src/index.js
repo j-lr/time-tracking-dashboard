@@ -2,10 +2,11 @@ import { createCardHtml } from "./cardUI.js";
 
 const CARDS_ROOT_ID = "cardsRoot";
 
-const TIME_FRAME_DAILY = 0;
-const TIME_FRAME_WEEKLY = 1;
-const TIME_FRAME_MONTHLY = 2;
-let currentTimeFrame = TIME_FRAME_DAILY;
+// const TIME_FRAME_DAILY = 0;
+// const TIME_FRAME_WEEKLY = 1;
+// const TIME_FRAME_MONTHLY = 2;
+let currentTimeFrame = "Daily";
+let data;
 
 document.addEventListener("DOMContentLoaded", loadContent);
 
@@ -36,7 +37,7 @@ function getCardTitleIconURL(data) {
 
 async function loadContent() {
   const cardsRoot = document.getElementById(CARDS_ROOT_ID);
-  const data = await fetchData();
+  data = await fetchData();
 
   if (data) {
     data.forEach((data) => {
@@ -51,15 +52,65 @@ async function loadContent() {
       );
     });
   }
+
+  const id = document.getElementById("id");
+
+  for (let i = 0, len = id.childElementCount; i < len; i++) {
+    const child = id.children.item(i);
+
+    child.addEventListener("click", (e) => {
+      onTimeFrameClick(child.textContent);
+      for (let i = 0, len = id.childElementCount; i < len; i++)
+        id.children.item(i).classList.remove("font-color-pale-white");
+
+      e.target.classList.add("font-color-pale-white");
+    });
+  }
+}
+
+function onTimeFrameClick(timeframe) {
+  switch (timeframe) {
+    case "Daily":
+      if (currentTimeFrame != "Daily") {
+        currentTimeFrame = "Daily";
+        updateTimeFrame();
+      }
+      break;
+    case "Weekly":
+      if (currentTimeFrame != "Weekly") {
+        currentTimeFrame = "Weekly";
+        updateTimeFrame();
+      }
+      break;
+    case "Monthly":
+      if (currentTimeFrame != "Monthly") {
+        currentTimeFrame = "Monthly";
+        updateTimeFrame();
+      }
+      break;
+  }
+}
+
+function updateTimeFrame() {
+  const currentTimeElements = document.querySelectorAll(".current-time");
+  currentTimeElements.forEach((e, index) => {
+    const timeFrame = extractDataTimeFrame(data[index]);
+    e.textContent = `${timeFrame.current}hrs`;
+  });
+  const prevTimeElements = document.querySelectorAll(".previous-time");
+  prevTimeElements.forEach((e, index) => {
+    const timeFrame = extractDataTimeFrame(data[index]);
+    e.textContent = `${extractPreviousTimeLabel()} - ${timeFrame.previous}hrs`;
+  });
 }
 
 function extractDataTimeFrame(data) {
   switch (currentTimeFrame) {
-    case TIME_FRAME_DAILY:
+    case "Daily":
       return data.timeframes.daily;
-    case TIME_FRAME_WEEKLY:
+    case "Weekly":
       return data.timeframes.weekly;
-    case TIME_FRAME_MONTHLY:
+    case "Monthly":
       return data.timeframes.monthly;
     default:
       throw new Error("default case reached ");
@@ -68,11 +119,11 @@ function extractDataTimeFrame(data) {
 
 function extractPreviousTimeLabel() {
   switch (currentTimeFrame) {
-    case TIME_FRAME_DAILY:
+    case "Daily":
       return "Yesterday";
-    case TIME_FRAME_WEEKLY:
+    case "Weekly":
       return "Last week";
-    case TIME_FRAME_MONTHLY:
+    case "Monthly":
       return "Last month";
     default:
       throw new Error("default case reached ");

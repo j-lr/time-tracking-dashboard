@@ -72,11 +72,12 @@ function createCardDataUI(title, timeObject, previousTimeLabel) {
   categoryInfo.className = CARD_TITLE_INFO_STYLE;
 
   const dataHeading = document.createElement("p");
-  dataHeading.className = "text-base laptop:text-4xl font-thin";
+  dataHeading.className = "current-time text-base laptop:text-4xl font-thin";
   dataHeading.textContent = `${timeObject.current}hrs`;
 
   const dataSubheading = document.createElement("p");
-  dataSubheading.className = "text-sm laptop:text-xs font-thin text-pale-blue";
+  dataSubheading.className =
+    "previous-time text-sm laptop:text-xs font-thin text-pale-blue";
   dataSubheading.textContent = `${previousTimeLabel} - ${timeObject.previous}hrs`;
 
   categoryInfo.appendChild(dataHeading);

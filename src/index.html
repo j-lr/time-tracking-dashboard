@@ -21,6 +21,7 @@
       rel="stylesheet"
     />
     <link href="./output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./index.css" />
     <script type="module" src="index.js"></script>
   </head>
   <body>
@@ -51,11 +52,12 @@
           </div>
 
           <div
-            class="flex laptop:flex-col justify-center gap-16 laptop:gap-4 px-2 px-6 laptop:pl-8 pb-8 text-blue"
+            id="id"
+            class="flex laptop:flex-col justify-center gap-16 laptop:gap-4 px-2 px-4 laptop:pl-6 pb-8 text-blue font-thin"
           >
-            <p>Daily</p>
-            <p>Weekly</p>
-            <p>Monthly</p>
+            <p class="cursor-pointer w-fit px-2 font-color-pale-white">Daily</p>
+            <p class="cursor-pointer w-fit px-2">Weekly</p>
+            <p class="cursor-pointer w-fit px-2">Monthly</p>
           </div>
         </div>
 
