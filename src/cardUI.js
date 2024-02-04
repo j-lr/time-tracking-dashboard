@@ -1,5 +1,5 @@
 const CARD_CONTAINER_STYLE =
-  "flex flex-col w-full  h-min font-rubik text-white ";
+  "flex flex-col laptop:max-w-[230px] w-full  h-min font-rubik text-white ";
 
 const CARD_BAR_CONTAINER_STYLE =
   "w-full h-16 rounded-tl-2xl laptop:rounded-tl-lg rounded-tr-2xl laptop:rounded-tr-lg overflow-hidden";
