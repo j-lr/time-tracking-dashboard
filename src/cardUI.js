@@ -1,4 +1,5 @@
-const CARD_CONTAINER_STYLE = "flex flex-col w-full h-min font-rubik text-white";
+const CARD_CONTAINER_STYLE =
+  "flex flex-col w-full h-min font-rubik text-white ";
 
 const CARD_BAR_CONTAINER_STYLE =
   "w-full h-16 rounded-tl-2xl laptop:rounded-tl-lg rounded-tr-2xl laptop:rounded-tr-lg overflow-hidden";
@@ -8,10 +9,11 @@ const CARD_BAR_TITLE_ICON_STYLE = " object-none float-right mr-3 -mt-1.5";
 const CARD_DATA_CONTAINER_STYLE =
   "flex flex-col gap-4 laptop:gap-16 bg-dark-blue w-full p-4 rounded-xl -mt-8 ";
 
-const CARD_TITLE_AND_ELLIPSIS_STYLE = "flex justify-between items-center";
+const CARD_TITLE_AND_ELLIPSIS_STYLE =
+  "flex justify-between items-center px-1.5 laptop:px-0";
 
 const CARD_TITLE_INFO_STYLE =
-  "flex laptop:flex-col justify-between gap-16 laptop:gap-4 pr-12";
+  "flex laptop:flex-col justify-between gap-16 laptop:gap-4 px-1.5 laptop:pr-12";
 
 const ELLIPSIS_ICON_URL = "../images/icon-ellipsis.svg";
 
